@@ -3,9 +3,7 @@
     <div class="max-w-md w-full bg-white p-8 rounded-md shadow-md">
       <form @submit.prevent="submitForm">
         <div class="mb-4">
-          <label for="username" class="block text-sm font-medium text-gray-600"
-            >Username:</label
-          >
+          <label for="username" class="block text-sm font-medium text-gray-600">Username:</label>
           <input
             id="username"
             v-model="formData.username"
@@ -19,9 +17,7 @@
           </div>
         </div>
         <div class="mb-4">
-          <label for="email" class="block text-sm font-medium text-gray-600"
-            >Email:</label
-          >
+          <label for="email" class="block text-sm font-medium text-gray-600">Email:</label>
           <input
             id="email"
             v-model="formData.email"
