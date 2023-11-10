@@ -9,11 +9,8 @@
             v-model="formData.username"
             class="mt-1 p-2 w-full border rounded-md"
           />
-          <div v-if="$v.username.$error" class="text-red-600 text-sm mt-1">
-            <div v-if="!$v.username.required">Username is required</div>
-            <div v-if="!$v.username.minLength">
-              Username must be at least 3 characters
-            </div>
+          <div v-for="error in $v.username.$errors" :key="error.$uid">
+            <div class="text-red-600 text-sm">{{ error.$message }}</div>
           </div>
         </div>
         <div class="mb-4">
